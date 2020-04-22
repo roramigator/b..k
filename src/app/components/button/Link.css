@@ -1,0 +1,23 @@
+.Link{
+  height: 36px;
+  width: 80px;
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  background-color: black;
+}
+.Hover{
+  text-decoration: none;
+  color: black;
+  transition: all ease 0.5s;
+}
+.Hover:hover{
+  color: #ff6161;
+}
+.void{
+  text-decoration: none;
+  color: black;
+}
