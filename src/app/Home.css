@@ -9,8 +9,7 @@
   border-bottom: 3px solid black;
 }
 .Home footer{
-  position: relative;
-  top: 750px;
+  margin-top: 50px;
   border-top: 3px solid black;
 }
 .Home footer div{

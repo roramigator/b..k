@@ -12,3 +12,17 @@
 .Bar input:focus{
   outline: none;
 }
+.H{
+  display: flex;
+  align-items: center;
+}
+.H .bxl-react, .H .bxl-nodejs{
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+.H .bxl-react:hover{
+  color: #61DBFB;
+}
+.H .bxl-nodejs:hover{
+  color: #037F04;
+}
