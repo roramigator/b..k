@@ -42,11 +42,6 @@ function Search(props){
         )
       }
     </div>
-    <div className='legends'>
-      <p><Button link={`\/bookshelf`} hover={true}><i className='bx bx-book-heart' ></i></Button> want to read</p>
-      <p><Button link={`\/bookshelf`} hover={true}><i className='bx bx-book-bookmark' ></i></Button> reading</p>
-      <p><Button link={`\/bookshelf`} hover={true}><i className='bx bx-book-add' ></i></Button> read</p>
-    </div>
   </div>
   )
 }

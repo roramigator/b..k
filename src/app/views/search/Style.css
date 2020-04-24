@@ -3,12 +3,6 @@
   flex-direction: column;
 
 }
-.Search .legends{
-  position: absolute;
-  top: 20px;
-  left: 10px;
-  border: 1px solid black;
-}
 .Search .books{
   display: flex;
   flex-wrap: wrap;
@@ -22,9 +16,18 @@
   border-bottom: 6px solid black;
   border-right: 1px solid black;
 }
+.Search .books div img{
+  position: relative;
+  top: -15px;
+  border: 1px solid grey;
+  box-shadow: 8px 15px 0 rgba(0,0,0,0.1);
+}
 .Search .books div .btns{
   border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.Search .books div .btns span{
+  font-size: 2vw;
 }
