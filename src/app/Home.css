@@ -1,7 +1,7 @@
 .Home {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
-
+  padding: 0 10px;
 }
 .Home header{
   display: flex;
@@ -19,8 +19,16 @@
   align-items: center;
 }
 
-@media screen and (max-width: 480px){
+/* TABLETS */
+@media screen and (min-width: 481px) and (max-width: 1023px){
   .Home{
     width: 80%;
+  }
+}
+
+/* DESKTOPS */
+@media screen and (min-width: 1024px){
+  .Home{
+    width: 50%;
   }
 }
