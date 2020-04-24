@@ -25,13 +25,10 @@ function Search(props){
       {
         results.status === 'complete' && (
           results.books.map(book=>{
-            return book.volumeInfo && (
+            return book.volumeInfo.imageLinks && (
               <div>
-                {
-                  book.volumeInfo.imageLinks && <img src={book.volumeInfo.imageLinks.thumbnail} />
-                }
-                <div>
-                  <p>{book.volumeInfo.title.substring(0,15)}...</p>
+                <img src={book.volumeInfo.imageLinks.thumbnail} />
+                <div className='btns'>
                   <span>
                     <Button link={`\/bookshelf`} hover={true}><i className='bx bx-book-heart' ></i></Button>
                     <Button link={`\/bookshelf`} hover={true}><i className='bx bx-book-bookmark' ></i></Button>
@@ -44,6 +41,11 @@ function Search(props){
           })
         )
       }
+    </div>
+    <div className='legends'>
+      <p><Button link={`\/bookshelf`} hover={true}><i className='bx bx-book-heart' ></i></Button> want to read</p>
+      <p><Button link={`\/bookshelf`} hover={true}><i className='bx bx-book-bookmark' ></i></Button> reading</p>
+      <p><Button link={`\/bookshelf`} hover={true}><i className='bx bx-book-add' ></i></Button> read</p>
     </div>
   </div>
   )
