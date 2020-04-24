@@ -18,6 +18,7 @@ function Home() {
   { /*}<Route path='/' component={NotFound} /> */ }
   return (
     <CookieProvider>
+      <i class='bx bx-code'></i>
       <div className='Home'>
         <header>
           <h1><Button link={`/bookshelf`}><i className='bx bxs-book'></i></Button>b..k</h1>
@@ -33,10 +34,11 @@ function Home() {
         <footer>
           <div>
             <span style={{textAlign:'center'}}><i className='bx bx-copyright bx-flip-horizontal'></i> copyleft 2020. all rights reversed.</span>
-            <h1><Button link={`/bookshelf`}><i className='bx bxs-book'></i></Button></h1>
+            <h1><Button link={`/bookshelf`}><i className='bx bxs-heart' style={{color:'red'}}></i></Button></h1>
           </div>
         </footer>
       </div>
+      <i class='bx bx-code-alt'></i>
     </CookieProvider>
   )
 }

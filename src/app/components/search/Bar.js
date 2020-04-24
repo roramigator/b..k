@@ -17,6 +17,7 @@ function SearchBar(){
       </div>
     ) : (
       <h1 className='H'>
+        <span>with.</span>
         <i className='bx bxl-react'></i>
         <i className='bx bxl-nodejs' ></i>
       </h1>
