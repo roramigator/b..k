@@ -1,40 +1,12 @@
 .Search{
   display: flex;
   flex-direction: column;
+  border: 1px solid black;
 
-  .books{
+  &>div{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    .book{
-      width:230px;
-      height: 280px;
-      border: 3px solid black;
-      margin: 20px;
-      padding: 5px;
-      text-align: justify;
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-      /* overflow: hidden; */
-      /* word-wrap: break-word; */
-      img{
-        position:relative;
-        left: -25px;
-        border: 3px solid #ff6161;
-        box-shadow: 5px 5px 0 #ccc;
-      }
-
-      div{
-        display: flex;
-        flex-direction: column;
-
-        span{
-          display: flex;
-          justify-content: center;
-        }
-      }
-    }
+    border: 3px solid black;
+    /* flex-wrap: wrap;
+    justify-content: center; */
   }
 }

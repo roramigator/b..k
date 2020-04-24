@@ -5,7 +5,7 @@ import './Style.css';
 import Button from '../../components/button/Link';
 
 function Search(props){
-  const sudo = passwd()
+  const sudo = passwd();
   const bk = props.match.params.bk;
   const [results, changeResults] = React.useState({});
   const [status, setStatus] = React.useState(props.status);
@@ -18,7 +18,7 @@ function Search(props){
 
   return (
     <div className='Search'>
-    <h2>[`\/search`]$ cd <Button link={`\/bookshelf`} hover={true}>/bookshelf</Button>_</h2>
+    <h2>[/search]$ cd <Button link={`\/bookshelf`} hover={true}>/bookshelf</Button>_</h2>
     <p style={{color:'#ff6161'}}>$ find / | grep -i '{bk}' [{status}]</p>
     <span style={{color:'black'}}>{status === 'searching' && error}</span>
     <div className='books'>

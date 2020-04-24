@@ -1,4 +1,5 @@
 import React from 'react';
+import passwd from '../../su';
 import './Style.css';
 
 import {CookieContext} from '../../cookie/Context';
@@ -8,9 +9,10 @@ import Button from '../../components/button/Link';
 const l = (log) => console.log(log);
 
 function IO({history}){
+  const sudo = passwd();
   const [cookie, IO] = React.useContext(CookieContext);
   cookie && history.push("/bookshelf");
-  
+
   const [user, setUser] = React.useState('');
   const [pass, setPass] = React.useState('');
 
@@ -23,25 +25,29 @@ function IO({history}){
   // });
 
   const login = () => {
-    fetch('http://localhost:7000/signin/uuid', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({username: user, password: pass})
-    })
-    .then(is=>{
-      return is.ok ? is.json() : {error:true, message:'muggle error!. ¡aa sa ñaħal. ši ññox'};
-    })
-    .then(has=>{
-      !has.error ? (()=>{
-        IO(has.uuid);
-        history.push("/bookshelf");
-      })() : (
-        newError(has.message)
-      )
-    })
-  };
+    sudo.ssh(user, pass, IO, history, newError);
+  }
+
+  // const login = () => {
+  //   fetch('http://localhost:7000/signin/uuid', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify({username: user, password: pass})
+  //   })
+  //   .then(is=>{
+  //     return is.ok ? is.json() : {error:true, message:'muggle error!. ¡aa sa ñaħal. ši ññox'};
+  //   })
+  //   .then(has=>{
+  //     !has.error ? (()=>{
+  //       IO(has.uuid);
+  //       history.push("/bookshelf");
+  //     })() : (
+  //       newError(has.message)
+  //     )
+  //   })
+  // };
 
   return (
     <form className='IO'>
