@@ -1,7 +1,7 @@
 function passwd(){
 
   const search = (bk,send,status,error) => {
-    const searchURL = `http://67.248.242.2:7000/book/search/${bk}`;
+    const searchURL = `http://localhost:7000/book/search/${bk}`;
     fetch(searchURL)
     . then(is=>{
         return is.ok ? is.json() : {error:true, message:'missing sock!. dobby is free!'};
@@ -17,7 +17,7 @@ function passwd(){
   };
 
   const login = (user, pass, log, history, error) => {
-    const loginURL = `http://67.248.242.2:7000/signin/uuid`;
+    const loginURL = `http://localhost:7000/signin/uuid`;
     fetch(loginURL, {
       method: 'POST',
       headers: {
