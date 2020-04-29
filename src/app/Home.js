@@ -29,6 +29,7 @@ function Home() {
             <Route exact path='/' component={IO} />
             <ProtectedRoute exact path='/bookshelf' component={Bookshelf} />
             <ProtectedRoute exact path='/search/:bk' component={Search} status='..' />
+            <Route path="/" component={NotFound} />
           </Switch>
         </div>
         <footer>
