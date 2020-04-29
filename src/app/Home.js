@@ -12,10 +12,7 @@ import Bookshelf from './views/bookshelf/Page'
   import SearchBar from './components/search/Bar';
   import Button from './components/button/Link';
 
-// const home = require('../assets/1.svg');
-
 function Home() {
-  { /*}<Route path='/' component={NotFound} /> */ }
   return (
     <CookieProvider>
       <i class='bx bx-code'></i>
