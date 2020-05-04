@@ -10,7 +10,14 @@ function Button({link, str, children, hover, on, click=()=>{}}){
   const ch = hover ? 'Hover' : 'void';
   const text = hover ? <span>{children}</span> : children;
   return (
-    <Link to={link || ''} className={str ? 'Link' : ch} style={on && {backgroundColor:'#ff6161'}} onClick={()=>click({found:cookie,log:IO})}>{str || text}</Link>
+    <Link
+      to={link || ''}
+      className={str ? 'Link' : ch}
+      style={on && {backgroundColor:'#ff6161'}}
+      onClick={()=>click({found:cookie,log:IO})}
+    >
+      {str || text}
+    </Link>
   )
 }
 

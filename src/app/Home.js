@@ -12,10 +12,11 @@ import Bookshelf from './views/bookshelf/Page'
   import SearchBar from './components/search/Bar';
   import Button from './components/button/Link';
 
+  // <ProtectedRoute exact path='/bookshelf/:bk/:sh' component={ShelfApi} />
 function Home() {
   return (
     <CookieProvider>
-      <i class='bx bx-code'></i>
+      <i className='bx bx-code'></i>
       <div className='Home'>
         <header>
           <h1><Button link={`/bookshelf`}><i className='bx bxs-book'></i></Button>b..k</h1>
@@ -36,7 +37,7 @@ function Home() {
           </div>
         </footer>
       </div>
-      <i class='bx bx-code-alt'></i>
+      <i className='bx bx-code-alt'></i>
     </CookieProvider>
   )
 }

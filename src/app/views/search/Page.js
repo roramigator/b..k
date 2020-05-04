@@ -30,9 +30,9 @@ function Search(props){
                 <img src={book.volumeInfo.imageLinks.thumbnail} />
                 <div className='btns'>
                   <span>
-                    <Button link={`\/bookshelf`} hover={true}><i className='bx bx-book-heart' ></i></Button>
-                    <Button link={`\/bookshelf`} hover={true}><i className='bx bx-book-bookmark' ></i></Button>
-                    <Button link={`\/bookshelf`} hover={true}><i className='bx bx-book-add' ></i></Button>
+                    <Button link={`/bookshelf/${book.id}/wantToRead`} hover={true}><i className='bx bx-book-add' ></i></Button>
+                    <Button link={`/bookshelf/${book.id}/currentlyReading`} hover={true}><i className='bx bx-book-bookmark' ></i></Button>
+                    <Button link={`/bookshelf/${book.id}/read`} hover={true}><i className='bx bx-book-heart' ></i></Button>
                   </span>
                   <Button str='more' on={true} />
                 </div>
