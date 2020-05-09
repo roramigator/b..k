@@ -11,6 +11,7 @@ function Search(props){
   const [status, setStatus] = React.useState(props.status);
   const [error, newError] = React.useState('missing sock!. dobby is free!');
 
+
   React.useEffect(()=>{
     setStatus(props.status);
     sudo.find(bk,changeResults,setStatus,newError);
@@ -30,7 +31,7 @@ function Search(props){
                 <img src={book.volumeInfo.imageLinks.thumbnail} />
                 <div className='btns'>
                   <span>
-                    <Button link={`/bookshelf/${book.id}/wantToRead`} hover={true}><i className='bx bx-book-add' ></i></Button>
+                    <Button click={({addToShelf})=>addToShelf(book.id,"/wantToRead")} hover={true}><i className='bx bx-book-add' ></i></Button>
                     <Button link={`/bookshelf/${book.id}/currentlyReading`} hover={true}><i className='bx bx-book-bookmark' ></i></Button>
                     <Button link={`/bookshelf/${book.id}/read`} hover={true}><i className='bx bx-book-heart' ></i></Button>
                   </span>

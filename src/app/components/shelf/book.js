@@ -8,9 +8,10 @@ function Shelf({bookshelf,shelf,icon}){
       <h2>{icon[shelf]}{shelf}</h2>
       {
         bookshelf[shelf].map(book=>{
-          return (
-            <Button link={"/"} key={book.id}>{book.title}</Button>
-          )
+          return (<>
+            [<Button link={"/"} key={book.id}>{book.title}</Button>
+          ]$ (<Button>ls -al</Button>), (<Button hover>rm ./ -rf</Button>)
+          </>)
         })
       }
     </div>
