@@ -19,7 +19,7 @@ function Bookshelf(props){
     fetch(`http://localhost:7000/bookshelf?id=${cookie}`)
       .then(load=>load.json())
       .then(res=>loadBookshelf(res.books))
-  },[])
+  },[bookshelf])
 
   return (
     <>

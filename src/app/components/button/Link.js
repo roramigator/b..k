@@ -15,7 +15,6 @@ function Button({link, str, children, hover, on, click=()=>{},history}){
       fetch(`http://localhost:7000/bookshelf/${bk}/${sh}?id=${cookie}`,{
         method:"PUT"
       })
-      
     )
   };
 

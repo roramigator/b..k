@@ -32,8 +32,8 @@ function Search(props){
                 <div className='btns'>
                   <span>
                     <Button click={({addToShelf})=>addToShelf(book.id,"/wantToRead")} hover={true}><i className='bx bx-book-add' ></i></Button>
-                    <Button link={`/bookshelf/${book.id}/currentlyReading`} hover={true}><i className='bx bx-book-bookmark' ></i></Button>
-                    <Button link={`/bookshelf/${book.id}/read`} hover={true}><i className='bx bx-book-heart' ></i></Button>
+                    <Button click={({addToShelf})=>addToShelf(book.id,"/currentlyReading")} hover={true}><i className='bx bx-book-bookmark' ></i></Button>
+                    <Button click={({addToShelf})=>addToShelf(book.id,"/read")} hover={true}><i className='bx bx-book-heart' ></i></Button>
                   </span>
                   <Button str='more' on={true} />
                 </div>
